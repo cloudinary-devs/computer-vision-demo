@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Computer Vision Demo</title>
+  <link rel="stylesheet" type="text/css" href="static/main.css">
+  <style> 
+
+h1,h2,h3,p{
+  margin-left:62px;
+}
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Cloudinary Computer Vision Demo</h1>
+    <p>Is someone watching? Cloudinary AI is... use it to do more, faster.</p>
+
+    <h2>Upload some of your own images</h2>
+    <p>and let Cloudinary's AI instantaneously transform your images appropriately and return a description</p>
+  </div>
+
+  <!--This form displays the product images and returns user selections to the backend.-->
+<div>
+  <h3>{{failed_upload}}</h3>
+</div>
+
+    <button 
+  id="upload_widget" 
+  class="cloudinary-button">
+    Upload files
+</button>
+    
+
+
+
+<!-- placeholder for uploaded image -->
+<div id="holdImages">
+<h1 id="heading"></h1>
+</div>
+<p id="response"></p>
+
+
+<form method="POST" action="{{ url_for('output')}}">
+    <button id="showDetails" style="display:none" class="cloudinary-button" type="submit">See Details</button>
+</form>
+
+
+
+<!-- cloudinary upload widget -->
+<script 
+ src="https://widget.cloudinary.com/v2.0/global/all.js" 
+ type="text/javascript">
+</script>
+
+<!-- local upload instantiation -->
+
+
+<script>
+  const cloudName = "hzxyensd5"; // replace with your own cloud name
+const uploadPreset = "docs_computer_vision_demo"; // replace with your own upload preset
+
+// Remove the comments from the code below to add
+// additional functionality.
+// Note that these are only a few examples, to see
+// the full list of possible parameters that you
+// can add see:
+//   https://cloudinary.com/documentation/upload_widget_reference
+var calls=0;
+const myWidget = cloudinary.createUploadWidget(
+  {
+    cloudName: cloudName,
+    uploadPreset: uploadPreset,
+    maxFiles: 3
+    // cropping: true, //add a cropping step
+    // showAdvancedOptions: true,  //add advanced options (public_id and tag)
+    // sources: [ "local", "url"], // restrict the upload sources to URL and local files
+    // multiple: false,  //restrict upload to a single file
+    // folder: "user_images", //upload files to the specified folder
+    // tags: ["users", "profile"], //add the given tags to the uploaded files
+    // context: {alt: "user_uploaded"}, //add the given context data to the uploaded files
+    // clientAllowedFormats: ["images"], //restrict uploading to image files only
+    // maxImageFileSize: 2000000,  //restrict file size to less than 2MB
+    // maxImageWidth: 2000, //Scales the image down to a width of 2000 pixels before uploading
+    // theme: "purple", //change to a purple theme
+  },
+  (error, result) => {
+    if (!error && result && result.event === "success") { 
+      document.getElementById("heading").innerHTML = "Here are the originals you uploaded:";
+      var elem = document.createElement("img");
+      elem.setAttribute("src", result.info.secure_url);
+      elem.setAttribute("height", "200");
+
+      document.getElementById("holdImages").appendChild(elem);
+      document.getElementById("showDetails").style.display = "inline";
+      document.getElementById("upload_widget").style.display = "none";
+    }
+  }
+);
+
+document.getElementById("upload_widget").addEventListener(
+  "click",
+  function () {
+    myWidget.open();
+  },
+  false
+);
+
+
+</script>
+</body>
+
+</html>
