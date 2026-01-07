@@ -71,10 +71,10 @@ moderation = "aws_rek"
 )
 ```
 
-    **Note:** Remember to replace the comments after the first run.
+**Note:** Remember to replace the comments after the first run.
    
 11.  **Run the Flask app**
     
-    ```
-    python demo.py
-    ```
+```
+python demo.py
+```
