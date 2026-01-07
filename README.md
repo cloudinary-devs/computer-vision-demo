@@ -14,7 +14,7 @@ In this demo, you'll be asked upload up to 3 images. Cloudinary will analyze tho
    ```
 
 3. **Enable required add-ons**
-   Go to the [Add-ons](https://console.cloudinary.com/settings/addons) page of the Console Settings and enable:
+   <p>Go to the [Add-ons](https://console.cloudinary.com/settings/addons) page of the Console Settings and enable:</p>
    * **Auto Tagging by Google**
    * **OCR Text Detection and Extraction**
    * **AI Moderation by Amazon Rekognition**
@@ -38,14 +38,14 @@ In this demo, you'll be asked upload up to 3 images. Cloudinary will analyze tho
     ```
 
 7. **Create a `.env` file**
-   Add the following environment variable:
+   <p>Add the following environment variable:</p>
   
     ```
     CLOUDINARY_URL=cloudinary://<api_key>:<api_secret>@<cloud_name>
     ``` 
    
 8. **Replace placeholders**
-   Update the `.env` file with your Cloudinary credentials, which you can find in the [API Keys](https://console.cloudinary.com/settings/api-keys) page of the Console Settings.
+   <p>Update the `.env` file with your Cloudinary credentials, which you can find in the [API Keys](https://console.cloudinary.com/settings/api-keys) page of the Console Settings.</p>
 
 9. **Update the `cloudName` value**
    In `index.html`, replace the value for `cloudName` with your Cloudinary cloud name.
@@ -69,10 +69,7 @@ In this demo, you'll be asked upload up to 3 images. Cloudinary will analyze tho
       )
       ```
 
-    {note}
-    Remember to replace the comments after the first run.
-    {/note}
-
+    **Note:** Remember to replace the comments after the first run.
    
 11.  **Run the Flask app**
     
