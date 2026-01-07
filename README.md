@@ -15,9 +15,11 @@ In this demo, you'll be asked upload up to 3 images. Cloudinary will analyze tho
 
 3. **Enable required add-ons**
    <p>Go to the <a href="https://console.cloudinary.com/settings/addons">Add-ons</a> page of the Console Settings and enable:</p>
-   * **Auto Tagging by Google**
-   * **OCR Text Detection and Extraction**
-   * **AI Moderation by Amazon Rekognition**
+   <ul>
+   <li><b>Auto Tagging by Google</b></li>
+   <li><b>OCR Text Detection and Extraction</b></li>
+   <li><b>AI Moderation by Amazon Rekognition</b></li>
+   </ul>
 
 4. **Create a virtual environment**
    
