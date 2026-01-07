@@ -7,7 +7,7 @@ In this demo, you'll be asked upload up to 3 images. Cloudinary will analyze tho
 ## Setup instructions (after cloning from GitHub)
 
 1. **Navigate to the project directory**
-   After cloning the repository, navigate into it:
+   <p>After cloning the repository, navigate into it:</p>
 
    ```
    cd computer-vision-demo
