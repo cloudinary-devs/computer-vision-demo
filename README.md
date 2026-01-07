@@ -6,44 +6,51 @@ In this demo, you'll be asked upload up to 3 images. Cloudinary will analyze tho
 
 ## Setup instructions (after cloning from GitHub)
 
-1. **Enable required add-ons**
+1. **Navigate to the project directory**
+   After cloning the repository, navigate into it:
+
+   ```
+   cd computer-vision-demo
+   ```
+
+3. **Enable required add-ons**
    Go to the [Add-ons](https://console.cloudinary.com/settings/addons) page of the Console Settings and enable:
    * **Auto Tagging by Google**
    * **OCR Text Detection and Extraction**
    * **AI Moderation by Amazon Rekognition**
 
-2. **Create a virtual environment**
+4. **Create a virtual environment**
    
     ```
     python3 -m venv venv
     ```
 
-3. **Activate your virtual environment**
+5. **Activate your virtual environment**
    
     ```
     source venv/bin/activate
     ```
 
-4. **Install dependencies**
+6. **Install dependencies**
    
     ```
     pip install -r requirements.txt
     ```
 
-5. **Create a `.env` file**
+7. **Create a `.env` file**
    Add the following environment variable:
   
     ```
     CLOUDINARY_URL=cloudinary://<api_key>:<api_secret>@<cloud_name>
     ``` 
    
-6. **Replace placeholders**
+8. **Replace placeholders**
    Update the `.env` file with your Cloudinary credentials, which you can find in the [API Keys](https://console.cloudinary.com/settings/api-keys) page of the Console Settings.
 
-7. **Update the `cloudName` value**
+9. **Update the `cloudName` value**
    In `index.html`, replace the value for `cloudName` with your Cloudinary cloud name.
 
-8. **(First-time only) Create the upload preset**
+10. **(First-time only) Create the upload preset**
    In `demo.py`, uncomment the following block inside the `index()` route the first time you run the app:
 
     ```
@@ -67,7 +74,7 @@ In this demo, you'll be asked upload up to 3 images. Cloudinary will analyze tho
     {/note}
 
    
-9.  **Run the Flask app**
+11.  **Run the Flask app**
     
     ```
     python demo.py
