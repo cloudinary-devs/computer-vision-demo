@@ -14,7 +14,7 @@ In this demo, you'll be asked upload up to 3 images. Cloudinary will analyze tho
    ```
 
 3. **Enable required add-ons**
-   <p>Go to the [Add-ons](https://console.cloudinary.com/settings/addons) page of the Console Settings and enable:</p>
+   <p>Go to the <a href="https://console.cloudinary.com/settings/addons">Add-ons</a> page of the Console Settings and enable:</p>
    * **Auto Tagging by Google**
    * **OCR Text Detection and Extraction**
    * **AI Moderation by Amazon Rekognition**
@@ -45,13 +45,13 @@ In this demo, you'll be asked upload up to 3 images. Cloudinary will analyze tho
     ``` 
    
 8. **Replace placeholders**
-   <p>Update the `.env` file with your Cloudinary credentials, which you can find in the [API Keys](https://console.cloudinary.com/settings/api-keys) page of the Console Settings.</p>
+   <p>Update the <code>.env</code> file with your Cloudinary credentials, which you can find in the <a href="https://console.cloudinary.com/settings/api-keys">API Keys</a> page of the Console Settings.</p>
 
 9. **Update the `cloudName` value**
-   In `index.html`, replace the value for `cloudName` with your Cloudinary cloud name.
+   <p>In <code>index.html</code>, replace the value for <code>cloudName</code> with your Cloudinary cloud name.</p>
 
 10. **(First-time only) Create the upload preset**
-   In `demo.py`, uncomment the following block inside the `index()` route the first time you run the app:
+   <p>In <code>demo.py</code>, uncomment the following block inside the <code>index()</code> route the first time you run the app:</p>
 
     ```
       # Create the upload preset only once:
